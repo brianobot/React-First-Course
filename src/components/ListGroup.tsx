@@ -1,21 +1,17 @@
 import { useState } from "react";
 
 interface Props {
-    items: string[];
-    heading: string;
-    onSelectItem: (item: string) => void;
+  items: string[];
+  heading: string;
+  onSelectItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: Props) {
-  
+  //   props should be treated immutable in the body of the function that they are passed to
+  //   while
+  // state are mutable
 
-  //    cities = [];
-
-  //    optinonally declare event handlers as functions in the component body
-  //    by convention name the handler handleNameOfEvent
-
-
-//   useState is a Hook
+  //   useState is a Hook
   const [selectedIndex, setSelectIndex] = useState(-1);
 
   const message = items.length === 0 && (
@@ -36,8 +32,8 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
                 : "list-group-item"
             }
             onClick={() => {
-                setSelectIndex(index);
-                onSelectItem(city);
+              setSelectIndex(index);
+              onSelectItem(city);
             }}
             key={city}
           >
