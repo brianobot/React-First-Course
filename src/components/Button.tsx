@@ -1,7 +1,8 @@
 
 
 interface Props {
-    children?: string;
+    children?: string; // the qustion mark before the colon for the type annotation is 
+    //  marker that the property is optional and can be skipped safely
     onClick: () => void;
 }
 
