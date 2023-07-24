@@ -49,3 +49,9 @@ const regularPerson {
 
 let { firstname } = regularPerson 
 console.log(firstname) // Brian
+
+// Just for reference the name of the deconstructed variable doesn;t have to match
+// the attribute name, just the attribute position matters
+
+Further more functions that expect objects can be deconstructed at the arguments level to obtain
+just the attributes needed, 
