@@ -38,20 +38,34 @@ To Run the local development server
 
 
 ### Javscript Tips
-- Variable Deconstruction: This allows us to select certain attributes from within an object to be used an independent variables
-in other scopes of the program
+- Object Deconstruction: This allows us to select certain attributes from within an object to be used an independent variables
+    in other scopes of the program
 
-Example :
-const regularPerson {
-    firstName: "Brian",
-    lastName: "Obot"
-}
+    Example :
+    
+        const regularPerson {
+            firstName: "Brian",
+            lastName: "Obot"
+        }
 
-let { firstname } = regularPerson 
-console.log(firstname) // Brian
+        let { firstname } = regularPerson 
+        console.log(firstname) // Brian
 
-// Just for reference the name of the deconstructed variable doesn;t have to match
-// the attribute name, just the attribute position matters
+        // Just for reference the name of the deconstructed variable doesn;t have to match
+        // the attribute name, just the attribute position matters
 
-Further more functions that expect objects can be deconstructed at the arguments level to obtain
-just the attributes needed, 
+        Further more functions that expect objects can be deconstructed at the arguments level to obtain
+        just the attributes needed, 
+
+
+- Object Literal Enhancement: This is the opposite of Object deconstruction, it allows variables to be grabbed from the 
+    global scope and construction objects using these variables
+
+    Example : 
+
+        const name = "Tallac";
+        const elevation = 9738;
+
+        const funHike = { name, elevation };
+        console.log(funHike); // {name: "Tallac", elevation: 9738}
+
