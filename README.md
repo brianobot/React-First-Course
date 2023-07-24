@@ -35,3 +35,17 @@ To Run the local development server
 - node_modules: Contain library files needed by dependecies 
 - public: Contain assets that would be exposed by your application (e.g Videos, Pictures etc)
 - src : Contain the source code for your application
+
+
+### Javscript Tips
+- Variable Deconstruction: This allows us to select certain attributes from within an object to be used an independent variables
+in other scopes of the program
+
+Example :
+const regularPerson {
+    firstName: "Brian",
+    lastName: "Obot"
+}
+
+let { firstname } = regularPerson 
+console.log(firstname) // Brian
